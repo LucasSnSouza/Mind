@@ -5,13 +5,11 @@
         <div class="slide-show-data w-full flex gap-md x-center y-center">
 
             <div 
-                class="slide-show-image shadow-sm"
+                class="slide-show-image rounded-md bg-color-brand-two"
                 v-for="(image, index) of images"
                 :class="{'selected': index == current_index}"
                 :key="index"
-                :style="{left: `-${100 * current_index}%`}"
             >
-                {{ 100 * current_index }}
             </div>
 
         </div>
@@ -20,6 +18,7 @@
 
             <div
                 v-for="(image, index) of images"
+                class="rounded"
                 :class="{'selected': index == current_index}"
                 :key="index"
             >
@@ -49,7 +48,7 @@ export default{
     created(){
         setInterval(() => {
             this.nextImage();
-        }, 2500);
+        }, 5000);
     },
     methods: {
         nextImage(){
@@ -74,13 +73,11 @@ export default{
             min-width: 90%;
             height: 100%;
             position: absolute;
-            background: white;
-            border-radius: var(--scale-brand-lg);
+            transform: translateX(110%);
             top: 0px;
-            transition: .5s;
-
-            &.selected{
-                transform: translateX(0);
+            transition: 1s;
+            &.selected {
+                transform: translateX(0); 
             }
         }
         
@@ -91,7 +88,6 @@ export default{
         div{
             width: 8px;
             height: 8px;
-            border-radius: 3px;
             background: var(--color-brand-two);
             transition: .5s;
 

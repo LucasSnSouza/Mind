@@ -31,6 +31,10 @@ $font-xlg: 20pt;
     padding: $scale-lg;
 }
 
+.rounded{
+    border-radius: 999px;
+}
+
 .rounded-sm{
     border-radius: $scale-sm;
 }
@@ -76,7 +80,7 @@ $font-xlg: 20pt;
 }
 
 .shadow-sm{
-    box-shadow: $scale-sm $scale-sm $scale-md rgba(0, 0, 0, 0.05);
+    box-shadow: $scale-sm $scale-sm $scale-md rgba(0, 0, 0, 0.03);
 }
 
 .aspect-ratio{
