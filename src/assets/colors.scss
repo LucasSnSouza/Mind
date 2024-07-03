@@ -1,0 +1,26 @@
+$color-brand-one: #eaf0f8;
+$color-brand-two: #303030;
+$color-brand-three: #dfe4f0;
+
+:root {
+
+  --color-brand-one: #{$color-brand-one};
+  --color-brand-two: #{$color-brand-two};
+  --color-brand-three: #{$color-brand-three};
+
+}
+
+.bg-color-brand-one {
+  background-color: var(--color-brand-one);
+}
+.bg-color-brand-two {
+  background-color: var(--color-brand-three);
+}
+
+
+.color-brand-one {
+  color: var(--color-brand-one);
+}
+.color-brand-two {
+  color: var(--color-brand-two);
+}
