@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import ViewLoginScreen from '@/views/ViewLoginScreen.vue';
 import ViewHomeScreen from '@/views/ViewHomeScreen.vue';
 
 const router = createRouter({
@@ -7,8 +8,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: ViewHomeScreen
+      name: 'SingUp',
+      component: ViewLoginScreen
+    },
+    {
+      path: '/home-view',
+      name: 'HomeView',
+      component: ViewLoginScreen
     },
   ]
 })
