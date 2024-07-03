@@ -2,13 +2,15 @@
 
     <div class="home-screen-wrapper h-full flex flex-column bg-color-brand-one">
 
-        <div class="flex x-end p-lg" @click.stop="navigationStore.setMenubarStatus(true)">
+        <div class="flex x-start p-lg" @click.stop="navigationStore.setMenubarStatus(true)">
 
-            <MiscIcon
-                icon="tri-dots-icon"
-                color="#303030"
-                :size="[17,17]"
-            />
+            <div class="bg-color-brand-two p-md rounded-md">
+                <MiscIcon
+                    icon="tri-dots-icon"
+                    color="#FFFFFF"
+                    :size="[20,20]"
+                />
+            </div>
 
         </div>
 
