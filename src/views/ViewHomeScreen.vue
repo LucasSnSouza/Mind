@@ -138,7 +138,7 @@ export default{
 
 .icon-search{
     position: absolute;
-    bottom: 24px;
+    bottom: 23px;
     right: 23px;
 }
 

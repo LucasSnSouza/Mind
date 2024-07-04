@@ -10,6 +10,14 @@
     position: absolute;
 }
 
+.wrap{
+    flex-wrap: wrap;
+}
+
+.grid{
+    display: grid;
+}
+
 .flex{
     display: flex;
 }

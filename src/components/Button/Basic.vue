@@ -35,6 +35,10 @@ export default{
         background: var(--color-brand-three);
     }
 
+    &.two{
+        background: var(--color-brand-one);
+    }
+
 }
 
 </style>
