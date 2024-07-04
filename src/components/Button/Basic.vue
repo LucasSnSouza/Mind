@@ -29,23 +29,10 @@ export default{
 .button-basic{
     outline: none;
     border: none;
+    overflow: hidden;
 
     &.one{
-        background: var(--color-brand-two);
-
-        &.ghost{
-            background: none;
-            border: 1px solid var(--color-brand-two);
-        }
-    }
-
-    &.two{
-        background: none;
-        border: 2px solid var(--color-brand-two);
-    }
-
-    &.three{
-        background: var(--color-brand-one);
+        background: var(--color-brand-three);
     }
 
 }

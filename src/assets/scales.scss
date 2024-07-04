@@ -13,6 +13,7 @@ $font-xlg: 20pt;
     --scale-brand-sm: #{$scale-sm};
     --scale-brand-md: #{$scale-md};
     --scale-brand-lg: #{$scale-lg};
+    --scale-brand-xlg: #{$scale-xlg};
 
     --text-brand-sm: #{$font-sm};
     --text-brand-md: #{$font-md};
@@ -29,6 +30,10 @@ $font-xlg: 20pt;
 
 .p-lg{
     padding: $scale-lg;
+}
+
+.p-xlg{
+    padding: $scale-xlg;
 }
 
 .rounded{
@@ -80,7 +85,7 @@ $font-xlg: 20pt;
 }
 
 .shadow-sm{
-    box-shadow: $scale-sm $scale-sm $scale-md rgba(0, 0, 0, 0.03);
+    box-shadow: $scale-sm $scale-sm $scale-md rgba(0, 0, 0, 0.1);
 }
 
 .aspect-ratio{

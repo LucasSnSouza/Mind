@@ -5,11 +5,17 @@
         <div class="slide-show-data w-full flex gap-md x-center y-center">
 
             <div 
-                class="slide-show-image rounded-md bg-color-brand-two"
-                v-for="(image, index) of images"
+                class="slide-show-image flex x-center rounded-md bg-color-brand-two color-brand-two"
+                v-for="(item, index) of items"
                 :class="{'selected': index == current_index}"
                 :key="index"
             >
+                <div 
+                    class="slide-show-description shadow-sm p-lg rounded-md"
+                    v-if="item?.description"
+                >
+                    <p>{{ item?.description }}</p>
+                </div>
             </div>
 
         </div>
@@ -17,10 +23,12 @@
         <div class="slide-show-demolines flex x-center y-center w-full gap-md p-lg">
 
             <div
-                v-for="(image, index) of images"
+                v-for="(item, index) of items"
                 class="rounded"
+                :style="{marginTop: `${items[current_index]?.description ? 15 : 0}px`}"
                 :class="{'selected': index == current_index}"
                 :key="index"
+                @click="current_index = index"
             >
             </div>
 
@@ -37,23 +45,24 @@ export default{
     data(){
         return {
             current_index: 0,
+            timer_id: null,
         }
     },
     props: {
-        images: {
+        items: {
             type: Array,
-            default: () => ['tete', 'dd', 'cc']
+            default: () => []
         }
     },
     created(){
-        setInterval(() => {
-            this.nextImage();
+        this.timer_id = setInterval(() => {
+            this.nextItem();
         }, 5000);
     },
     methods: {
-        nextImage(){
-            this.current_index = (this.current_index + 1) % this.images.length;
-        }
+        nextItem(target = null){
+            this.current_index = (this.current_index + 1) % this.items.length;
+        },
     }
     
 }
@@ -78,6 +87,14 @@ export default{
             transition: 1s;
             &.selected {
                 transform: translateX(0); 
+            }
+
+            .slide-show-description{
+                position: absolute;
+                width: 90%;
+                bottom: -20px;
+                color: black;
+                background: white;
             }
         }
         
