@@ -43,10 +43,9 @@
             <div class="flex gap-md scroll-x">
                 <ButtonBasic
                     v-for="(item, index) of favoritesAplicationItems"
-                    class="button-favorite w-full p-lg rounded-sm flex flex-column y-start color-brand-two"
+                    class="button-favorite p-lg rounded-sm flex flex-column y-start color-brand-two"
                     @click="console.log(item?.name)"
                 >
-                    <h1 class="font-sm text-start">{{ item?.name }}</h1>
                 </ButtonBasic>
             </div>
         </div>
@@ -132,7 +131,8 @@ export default{
 .favorite-tab{
 
     .button-favorite{
-        min-width: 140px;
+        height: 50px;
+        aspect-ratio: 1/1;
     }
 }
 

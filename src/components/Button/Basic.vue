@@ -33,6 +33,11 @@ export default{
 
     &.one{
         background: var(--color-brand-three);
+
+        &.ghost{
+            background: none;
+            border: 1px solid var(--color-brand-three);
+        }
     }
 
     &.two{

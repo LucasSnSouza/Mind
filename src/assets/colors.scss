@@ -2,6 +2,7 @@ $color-brand-one: #202020;
 $color-brand-two: #ffffff;
 $color-brand-three: #302e2e;
 $color-brand-four: #f7f8fa;
+$color-brand-five: #3499ec;
 
 :root {
 
@@ -9,6 +10,7 @@ $color-brand-four: #f7f8fa;
   --color-brand-two: #{$color-brand-two};
   --color-brand-three: #{$color-brand-three};
   --color-brand-four: #{$color-brand-four};
+  --color-brand-five: #{$color-brand-five};
 
 }
 
@@ -28,4 +30,7 @@ $color-brand-four: #f7f8fa;
 }
 .color-brand-two {
   color: var(--color-brand-two);
+}
+.color-brand-three {
+  color: var(--color-brand-three);
 }
